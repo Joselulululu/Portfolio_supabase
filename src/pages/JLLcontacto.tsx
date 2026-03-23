@@ -37,7 +37,22 @@ const Contacto: React.FC = () => {
             ))}
             </ul>
         </nav>
-        
+
+        <nav className='w-full h-40 border bg-white flex items-center px-4 mt-10'>
+          <a href="#" className='text-blue-600 hover:text-blue-800 font-medium'>
+            Mapa de Ubicacion
+          </a>
+        </nav>
+
+        <div id="ubicacion" ><h2></h2></div>
+
+        <nav className='w-full h-40 border bg-white flex items-center px-4 mt-10'>
+          <a href="#" className='text-blue-600 hover:text-blue-800 font-medium'>
+            Mapa de Ubicacion
+          </a>
+        </nav>
+
+
     </div>
   );
 };
