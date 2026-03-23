@@ -3,7 +3,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 
 const opcionesMenu = [
-  { nombre: 'Quiénes Somos', ruta: '/' },
+  { nombre: 'Home', ruta: '/' },
   { nombre: 'Integrales', ruta: '/Integrales' },
   { nombre: 'Perfiladas', ruta: '/Perfiladas' },
   { nombre: 'Campers', ruta: '/Campers ' },

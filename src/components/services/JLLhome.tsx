@@ -8,10 +8,10 @@ export const Home = () => {
           
           <div className="p-8 md:p-16 lg:pr-10 z-10 order-2 lg:order-1">
             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl mb-6 text-center lg:text-left">
-              ¿Quién soy?
+              Ya estamos en mas de 50 puntos de venta y Tasacion por toda españa
             </h2>
             <p className="text-lg md:text-xl text-gray-300 max-w-xl mb-10 leading-relaxed text-center lg:text-left mx-auto lg:mx-0">
-              Soy Jose Luis, actualmente cursando el Grado Superior de ASIR. Me apasiona la tecnología y cuento con un perfil técnico enfocado en dos pilares: Sistemas Operativos (Windows Server/Linux) y Desarrollo Frontend con React.
+              En autocaravanas Norte, disponemos de puntos de tasaccion y venta repartidos por toda España, para que siempre tengas un punto cerca de casa puedes vender o tasar tu autocaravana sin ningun tipo de compromiso. Te daremos el mejor precio del Mercado
             </p>
             </div>
             </div>
