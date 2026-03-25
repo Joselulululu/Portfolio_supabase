@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MainLayout } from "../components/layout/JLLmainlayout";
 import { Home } from "../pages/JLLhome";
-import { JLLAutocaravanas } from "../pages/JLLAutocaravanas";
+import  JLLAutocaravana  from "../pages/JLLAutocaravanas";
 import Contacto from "../pages/JLLcontacto";
-import { JLLAutocaravanaDetalle } from "../pages/JLLdet.autocaravana";
+import JLLdetAutocaravana  from "../pages/JLLdet.autocaravana";
 
 export default function Approuter() {
   return (
@@ -12,9 +12,9 @@ export default function Approuter() {
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
           
-          <Route path="/autocaravanas/:tipo" element={<JLLAutocaravanas />} />
+          <Route path="/autocaravanas/:tipo" element={<JLLAutocaravana />} />
           
-          <Route path="/autocaravana/:cod" element={<JLLAutocaravanaDetalle />} />
+          <Route path="/autocaravana/:cod" element={<JLLdetAutocaravana />} />
           
           <Route path="contacto" element={<Contacto />} />
         </Route>

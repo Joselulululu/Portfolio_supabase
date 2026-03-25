@@ -8,4 +8,5 @@ export interface Autocaravana {
   anchura: number;
   altura: number;
   precio: number;
+  cod:    number;
 }
