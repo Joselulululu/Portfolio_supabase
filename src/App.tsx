@@ -1,7 +1,7 @@
 
 import './App.css'
 
-import { MainLayout } from './components/mainlayout/JLLmainlayout';
+import { MainLayout } from './components/layout/JLLmainlayout';
 
 function App() {
 

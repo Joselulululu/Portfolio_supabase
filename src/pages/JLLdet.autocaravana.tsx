@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Users, ArrowLeft } from 'lucide-react';
-import misCaravanas from "../data/autocaravanas.json"; 
+import misCaravanas from "../Model/data/autocaravanas.json"; 
 
 export const JLLAutocaravanaDetalle = () => {
   const { cod } = useParams();

@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { MainLayout } from "../components/mainlayout/JLLmainlayout";
+import { MainLayout } from "../components/layout/JLLmainlayout";
 import { Home } from "../pages/JLLhome";
-import { JLLAutocaravanas } from "../components/Autocaravanas/JLLAutocaravanas";
+import { JLLAutocaravanas } from "../pages/JLLAutocaravanas";
 import Contacto from "../pages/JLLcontacto";
-import { JLLAutocaravanaDetalle } from "../components/Autocaravanas/JLLdet.autocaravana";
+import { JLLAutocaravanaDetalle } from "../pages/JLLdet.autocaravana";
 
 export default function Approuter() {
   return (

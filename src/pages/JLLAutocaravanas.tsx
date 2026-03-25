@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { Users } from 'lucide-react';
-import misCaravanas from "../data/autocaravanas.json"; 
+import misCaravanas from "../Model/data/autocaravanas.json"; 
 
 export const JLLAutocaravanas = () => {
   const { tipo } = useParams();
