@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { JLLServicioEstile } from '../components/cards/JLLServicioEstile';
 import { getServicios } from '../Model/api/main/apiservicio';
 import type { IServicio } from '../Model/interfaces/IServicio';

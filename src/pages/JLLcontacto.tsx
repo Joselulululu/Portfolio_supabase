@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Mail, Phone, MapPin, Share2 } from 'lucide-react';
+import { Mail, Phone, Share2 } from 'lucide-react';
 import { JLLRedesMuestra } from '../components/cards/JLLRedesMuestra';
 import { getRedes } from '../Model/api/main/apiredes'; // Importación de la API
 import type { IRedes } from '../Model/interfaces/IRedes'; // Importación de la interfaz
