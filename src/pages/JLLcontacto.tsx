@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Mail, Phone, Share2 } from 'lucide-react';
+import { Mail, Phone, Share2, Download, FileText } from 'lucide-react';
 import { JLLRedesMuestra } from '../components/cards/JLLRedesMuestra';
 import { getRedes } from '../Model/api/main/apiredes';
 import type { IRedes } from '../Model/interfaces/IRedes';
@@ -56,9 +56,20 @@ const Contacto: React.FC = () => {
             Contacto<span className="text-blue-600">.</span>
           </h1>
           <p className="text-[9px] md:text-[10px] tracking-[0.3em] md:tracking-[0.5em] text-gray-500 uppercase mt-4">Disponible para nuevos proyectos</p>
+          
+          <div className="mt-10">
+            <a 
+              href="/Curriculum Jose_Luis_Lopez_Fuentes.pdf" 
+              download="Curriculum_Jose_Luis_Lopez.pdf"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-all group shadow-[0_0_20px_rgba(37,99,235,0.3)]"
+            >
+              <Download size={18} className="group-hover:translate-y-1 transition-transform" />
+              <span className="text-[10px] font-black uppercase tracking-[0.2em]">Descargar Curriculum Jose Luis Lopez Fuentes</span>
+            </a>
+          </div>
         </div>
 
-        <div id="informacion" className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-24 md:mb-32">
+        <div id="informacion" className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-24 md:mb-32">
           <a 
             href="mailto:JoseLuisaajc@gmail.com"
             className="bg-white/5 border border-white/10 p-6 md:p-10 rounded-2xl flex flex-col justify-center group hover:border-blue-500/50 transition-colors cursor-pointer overflow-hidden"
@@ -69,24 +80,39 @@ const Contacto: React.FC = () => {
               </div>
               <div className="min-w-0 flex-1">
                 <p className="text-[9px] md:text-[10px] text-gray-500 uppercase tracking-widest font-bold">Email</p>
-                <p className="text-base sm:text-lg md:text-xl font-medium break-all leading-tight">
-                  JoseLuisaajc@gmail.com
-                </p>
+                <p className="text-base font-medium break-all leading-tight">JoseLuisaajc@gmail.com</p>
               </div>
             </div>
           </a>
 
           <div className="bg-white/5 border border-white/10 p-6 md:p-10 rounded-2xl flex flex-col justify-center">
             <div className="flex items-center gap-4">
-              <div className="flex-shrink-0 p-3 bg-blue-600/10 rounded-lg text-blue-500 transition-all">
+              <div className="flex-shrink-0 p-3 bg-blue-600/10 rounded-lg text-blue-500">
                 <Phone size={24} />
               </div>
               <div className="min-w-0 flex-1">
                 <p className="text-[9px] md:text-[10px] text-gray-500 uppercase tracking-widest font-bold">Teléfono</p>
-                <p className="text-lg md:text-xl font-medium">722 23 99 19</p>
+                <p className="text-lg font-medium">722 23 99 19</p>
               </div>
             </div>
           </div>
+
+          <a 
+            href="/Curriculum Jose_Luis_Lopez_Fuentes.pdf" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white/5 border border-white/10 p-6 md:p-10 rounded-2xl flex flex-col justify-center group hover:border-blue-500/50 transition-colors cursor-pointer"
+          >
+            <div className="flex items-center gap-4">
+              <div className="flex-shrink-0 p-3 bg-blue-600/10 rounded-lg text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                <FileText size={24} />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="text-[9px] md:text-[10px] text-gray-500 uppercase tracking-widest font-bold">Currículum</p>
+                <p className="text-lg font-medium">Visualizar PDF</p>
+              </div>
+            </div>
+          </a>
         </div>
 
         <div id="ubicacion" className="mb-24 md:mb-32">
@@ -96,7 +122,7 @@ const Contacto: React.FC = () => {
           </div>
           <div className="w-full h-[300px] md:h-[500px] rounded-3xl overflow-hidden border border-white/10 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.9931176645878!2d-1.9487059902081445!3d37.38999503411788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd652ef4ce694afb%3A0xcc2d893d53b2aae!2zQy4gRXN0YWNpw7NuLCAwNDYwMCBIdcOpcmNhbC1PdmVyYSwgQWxtZXLDrWE!5e0!3m2!1ses-419!2ses!4v1776666301644!5m2!1ses-419!2ses" 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12734.400583764835!2d-1.9547514!3d37.3051016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1713600000000!5m2!1ses!2ses" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

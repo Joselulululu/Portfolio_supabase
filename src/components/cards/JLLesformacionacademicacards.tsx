@@ -1,50 +1,53 @@
+import { Terminal, GraduationCap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import type { IFormacionAcademica } from "../../Model/interfaces/IFormacion_Academica";
-import { GraduationCap, Calendar, BookOpen } from 'lucide-react';
 
 interface Props {
     item: IFormacionAcademica;
+    index: number;
 }
 
-export const JLLFormacionAcademicaEstile = ({ item }: Props) => {
+export const JLLFormacionAcademicaEstile = ({ item, index }: Props) => {
     return (
-        <article className="group relative bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col h-full border border-gray-100 mx-auto w-full">
-            <div className="h-2 w-full bg-gradient-to-r from-blue-600 to-indigo-400 group-hover:from-indigo-500 group-hover:to-purple-500 transition-all duration-500" />
+        <article className="group relative bg-[#0a0a0a] rounded-[2.5rem] border border-white/5 p-8 md:p-12 flex flex-col h-full min-h-[500px] transition-all duration-700 hover:border-blue-500/30 hover:bg-[#0c0c0c] overflow-hidden shadow-2xl">
             
-            <div className="p-6 md:p-8 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-4 md:mb-6">
-                    <div className="p-3 bg-blue-50 rounded-2xl text-blue-600 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
-                        < GraduationCap size={28} />
-                    </div>
-                    <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-blue-500 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
-                        {item.nivel.split(' ')[0]}
-                    </span>
-                </div>
+            <span className="absolute -top-6 -right-4 text-8xl md:text-[10rem] font-black text-white/[0.03] italic group-hover:text-blue-600/10 transition-all duration-700 select-none">
+                0{index + 1}
+            </span>
 
-                <div className="flex-grow pb-12">
-                    <h2 className="text-xl md:text-2xl font-black text-gray-800 mb-2 leading-tight group-hover:text-blue-700 transition-colors">
-                        {item.nivel}
-                    </h2>
-                    
-                    <div className="flex items-start gap-2 text-indigo-600 font-bold text-sm mb-4">
-                        <BookOpen size={16} className="mt-1 flex-shrink-0" />
-                        <span className="leading-snug break-words">{item.centro}</span>
-                    </div>
+            <div className="relative z-10 flex-grow">
+                <h2 className="text-3xl md:text-5xl font-black text-white uppercase italic leading-[0.85] mb-10 tracking-tighter group-hover:text-blue-500 transition-colors duration-500">
+                    {item.nivel}<span className="text-blue-600">.</span>
+                </h2>
 
-                    <div className="relative p-4 md:p-5 bg-gray-50 rounded-2xl border-l-4 border-blue-400 italic text-gray-600 text-sm leading-relaxed mb-6">
-                        {item.descripcion}
-                    </div>
+                <div className="border-l-4 border-blue-600 pl-6 mb-10">
+                    <p className="text-gray-400 text-lg md:text-xl leading-relaxed font-light">
+                        {item.centro}
+                    </p>
                 </div>
-
-                <div className="mt-auto pt-4 border-t border-gray-100 flex flex-row items-center justify-between gap-2">
-                    <div className="flex items-center gap-1 md:gap-2 text-gray-400 shrink-0">
-                        <Calendar size={16} />
-                        <span className="text-[9px] font-black uppercase tracking-tighter">Certificado</span>
-                    </div>
-                    <span className="bg-gray-900 text-white text-[10px] md:text-xs font-black px-3 py-2 md:px-4 md:py-2 rounded-xl shadow-lg group-hover:bg-blue-600 transition-colors text-center whitespace-nowrap">
-                        {item.fecha_inicio} — <br className="block sm:hidden" /> {item.fecha_fin}
-                    </span>
-                </div>
+                
+                <p className="text-gray-500 font-mono text-xs uppercase tracking-widest mb-4">
+                    {item.fecha_inicio} — {item.fecha_fin}
+                </p>
             </div>
-        </article>  
+
+            <div className="mt-auto pt-10 flex items-center justify-between border-t border-white/5">
+                <Link 
+                    to={`/formacion/${item.id}`} 
+                    className="flex items-center gap-4 group/btn cursor-pointer z-20"
+                >
+                    <div className="p-3 bg-blue-600/10 rounded-xl text-blue-500 group-hover/btn:bg-blue-600 group-hover/btn:text-white transition-all duration-500">
+                        <Terminal size={20} />
+                    </div>
+                    <span className="text-white font-black text-[10px] uppercase tracking-[0.4em] group-hover/btn:text-blue-400 transition-colors">
+                        Ver_Expediente
+                    </span>
+                </Link>
+
+                <GraduationCap className="text-white/10 group-hover:text-blue-600/20 transition-colors" size={32} />
+            </div>
+
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-600/40 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
+        </article>
     );
 };

@@ -1,4 +1,5 @@
 import { Terminal } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import type { IServicio } from "../../Model/interfaces/IServicio";
 
 interface Props {
@@ -35,14 +36,18 @@ export const JLLServicioEstile = ({ item, index }: Props) => {
             </div>
 
             <div className="mt-auto pt-8 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                    <div className="p-2 bg-blue-600/10 rounded-lg text-blue-500">
+                <Link 
+                    to={`/servicio/${item.id}`} 
+                    className="flex items-center gap-3 group/btn cursor-pointer z-20"
+                >
+                    <div className="p-2 bg-blue-600/10 rounded-lg text-blue-500 group-hover/btn:bg-blue-600 group-hover/btn:text-white transition-all duration-300">
                         <Terminal size={16} className="animate-pulse" />
                     </div>
-                    <span className="text-white/40 font-black text-[9px] uppercase tracking-[0.3em] group-hover:text-white transition-colors">
+                    <span className="text-white/40 font-black text-[9px] uppercase tracking-[0.3em] group-hover/btn:text-blue-400 transition-colors">
                         Ready_to_deploy
                     </span>
-                </div>
+                </Link>
+
                 <div className="h-[1px] flex-grow mx-4 bg-white/5" />
                 <div className="text-blue-500/30 font-mono text-[8px] uppercase tracking-widest hidden sm:block">
                     v.2026
