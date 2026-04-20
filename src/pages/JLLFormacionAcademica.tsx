@@ -12,7 +12,7 @@ export default function FormacionPage() {
 
   return (
     <main>
-      <JLLFormacionAcademicaMuestra index={items} />
+      <JLLFormacionAcademicaMuestra formacionAcademica={items} />
     </main>
   );
 }
