@@ -24,7 +24,7 @@ export const JLLFormacionAcademicaDetalleCard = ({ item }: Props) => {
                     </h1>
                     
                     <div className="max-w-[90%] mx-auto md:pt-12 border-t border-white/5 flex flex-col items-center gap-6">
-                        <p className="text-xl sm:text-2xl md:text-4xl text-gray-400 leading-tight font-light italic">
+                        <p className="text-xl sm:text-2xl md:text-4xl text-gray-400 leading-tight font-light italic break-words">
                             "{item.descripcion}"
                         </p>
                         
@@ -50,7 +50,7 @@ export const JLLFormacionAcademicaDetalleCard = ({ item }: Props) => {
                         
                         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
                             <div className="w-full lg:w-1/2">
-                                <p className="text-gray-400 leading-relaxed text-lg md:text-2xl font-light text-left">
+                                <p className="text-gray-400 leading-relaxed text-lg md:text-2xl font-light text-left break-words">
                                     La formación en <span className="text-white font-bold underline decoration-blue-600 decoration-4 underline-offset-8">{item.nivel}</span> impartida en <span className="text-white">{item.centro}</span> representa una base fundamental técnica. 
                                     Se enfoca en la adquisición de habilidades prácticas y teóricas bajo estándares de excelencia académica.
                                 </p>
@@ -58,9 +58,11 @@ export const JLLFormacionAcademicaDetalleCard = ({ item }: Props) => {
 
                             <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {item.detalles?.map((detalle, i) => (
-                                    <div key={i} className="bg-white/[0.02] p-5 rounded-2xl border border-white/5 flex items-center gap-4 hover:bg-white/[0.05] hover:border-blue-600/40 transition-all group/item">
-                                        <div className="h-3 w-3 bg-blue-600 rounded-full shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
-                                        <span className="text-xs md:text-sm text-gray-200 uppercase font-bold tracking-wider">{detalle}</span>
+                                    <div key={i} className="bg-white/[0.02] p-5 rounded-2xl border border-white/5 flex items-start gap-4 hover:bg-white/[0.05] hover:border-blue-600/40 transition-all group/item">
+                                        <div className="h-3 w-3 bg-blue-600 rounded-full shadow-[0_0_10px_rgba(37,99,235,0.5)] flex-shrink-0 mt-1" />
+                                        <span className="text-xs md:text-sm text-gray-200 uppercase font-bold tracking-wider break-words overflow-hidden [word-break:break-word] hyphens-auto">
+                                            {detalle}
+                                        </span>
                                     </div>
                                 ))}
                             </div>
