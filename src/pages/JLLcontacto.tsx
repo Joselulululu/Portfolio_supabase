@@ -96,12 +96,12 @@ const Contacto: React.FC = () => {
           </div>
           <div className="w-full h-[300px] md:h-[500px] rounded-3xl overflow-hidden border border-white/10 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12690.0!2d-6.0!3d37.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1234567890" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.9931176645878!2d-1.9487059902081445!3d37.38999503411788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd652ef4ce694afb%3A0xcc2d893d53b2aae!2zQy4gRXN0YWNpw7NuLCAwNDYwMCBIdcOpcmNhbC1PdmVyYSwgQWxtZXLDrWE!5e0!3m2!1ses-419!2ses!4v1776666301644!5m2!1ses-419!2ses" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
               allowFullScreen={true} 
-              loading="lazy" 
+              loading="lazy"
             ></iframe>
           </div>
         </div>
